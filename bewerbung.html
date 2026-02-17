@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>EMS | Bewerbung</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="application-frame">
+    
+    <a href="index.html" class="back-button">Zurück zum Hauptmenü</a>
+
+    <img src="cadeceus.png" class="frame-top" alt="EMS Logo">
+
+    <form class="application-form">
+
+        <h2>Persönliche Angaben</h2>
+
+        <label>Ingame Name</label>
+        <input type="text" name="ingame" placeholder="Vorname_Nachname" required>
+
+        <label>Alter (IC)</label>
+        <input type="number" name="age" placeholder="z. B. 29" required>
+
+        <label>Spielerfahrung im RP</label>
+        <textarea name="experience" placeholder="Beschreibe deine RP-Erfahrung" required></textarea>
+
+        <h2>RP & EMS Wissen</h2>
+
+        <label>Warum möchtest du dem EMS beitreten?</label>
+        <textarea name="motivation" required></textarea>
+
+        <label>Was bedeutet professionelles EMS-RP für dich?</label>
+        <textarea name="professionalism" required></textarea>
+
+        <label>Wie würdest du dich in einer Massenkarambolage verhalten?</label>
+        <textarea name="masscasualty" required></textarea>
+
+        <label>
+            <input type="checkbox" name="rules" required>
+            Ich halte mich an SOPs (Standard Operating Procedure), Hierarchien und RP-Regeln
+        </label>
+
+        <button type="submit">Bewerbung einreichen</button>
+
+    </form>
+
+</section>
+
+<img src="ems.png" class="frame-bottom" alt="EMS">
+
+<footer>
+    <p>EMS RP Server • Bewerbungen werden IC geprüft</p>
+</footer>
+
+<script>
+document.querySelector(".application-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const ingame = form.ingame.value;
+    const age = form.age.value;
+    const experience = form.experience.value;
+    const motivation = form.motivation.value;
+    const professionalism = form.professionalism.value;
+    const masscasualty = form.masscasualty.value;
+
+    const webhookURL = "https://discordapp.com/api/webhooks/1472439540923764799/qE5OdGRX5wY-4gxwjoginxdq38QW9JSKi5i8RyozJXchBoxLH2L5etRyYifOnJMYPfkq"; // ❗ URL aus Sicherheitsgründen hier einsetzen
+
+    const payload = {
+        content:
+`🚑 **Neue EMS-Bewerbung**
+**Ingame Name:** ${ingame}
+**Alter (IC):** ${age}
+
+**RP-Erfahrung:**
+${experience}
+
+**Warum EMS?:**
+${motivation}
+
+**Professionelles EMS-RP:**
+${professionalism}
+
+**Massenkarambolage:**
+${masscasualty}`
+    };
+
+    try {
+        const response = await fetch(webhookURL, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+            alert("Deine Bewerbung wurde erfolgreich eingereicht!");
+            form.reset();
+        } else {
+            const text = await response.text();
+            alert(`Fehler beim Absenden (${response.status})`);
+            console.error(text);
+        }
+    } catch (error) {
+        alert("Verbindungsfehler – siehe Konsole");
+        console.error(error);
+    }
+});
+</script>
+
+</body>
+</html>

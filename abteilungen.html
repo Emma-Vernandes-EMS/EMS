@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Gothic EMS – Rollen & Notfallabläufe</title>
+<style>
+/* Basis-Layout */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: #0a0a0a url('textures/dark-nebel.png') repeat;
+    color: #ddd;
+    line-height: 1.6;
+}
+h1, h2 {
+    font-family: 'Blackletter', serif;
+    text-shadow: 0 0 8px #9400d3, 0 0 12px #6a0dad;
+    margin-bottom: 15px;
+}
+h1 {
+    color: #c0c0c0;
+    font-size: 3em;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #6a0dad;
+}
+h2 {
+    color: #9400d3;
+    font-size: 2em;
+    margin-top: 40px;
+    border-left: 6px solid #6a0dad;
+    padding-left: 12px;
+}
+
+/* Sektionen */
+.section {
+    background: rgba(10,10,10,0.85);
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    border: 2px solid #6a0dad;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(148,0,211,0.4);
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    padding: 8px 0;
+    position: relative;
+}
+li:before {
+    content: '🩺';
+    position: absolute;
+    left: -25px;
+    color: #c0c0c0;
+    text-shadow: 0 0 5px #9400d3;
+}
+.note {
+    background: #1a0a1a;
+    border-left: 5px solid #c0c0c0;
+    padding: 15px;
+    margin-top: 20px;
+    color: #eee;
+    text-shadow: 0 0 3px #6a0dad;
+}
+
+/* Hover-Effekt */
+.section li:hover {
+    color: #fff;
+    text-shadow: 0 0 12px #9400d3;
+}
+
+/* Code / Funktionsbeispiele */
+.code-block {
+    background: #111;
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: monospace;
+    color: #c0c0c0;
+    border-radius: 6px;
+}
+</style>
+</head>
+<body>
+
+<h1>🦇 EMS – Rollen & Notfallabläufe</h1>
+<a href="index.html" class="back-button">Zurück zum Hauptmenü</a>
+<!-- Rollen & Zuständigkeiten -->
+<div class="section" id="Rollen">
+<h2>1. Rollen & Zuständigkeiten</h2>
+<p><b>Beschreibung:</b> Wer macht was im Team? Wer trifft Entscheidungen?</p>
+<p><b>RP-Beispiele:</b></p>
+<ul>
+<li><b>Leitstelle / Dispatcher:</b> Koordination, Alarmierung, Dokumentation der Einsatzzeiten und Prioritäten.</li>
+<li>Teamleiter / Notfallsanitäter 1: Koordiniert Einsatz, weist Aufgaben zu, entscheidet über Transport ins Krankenhaus.</li>
+<li>Sanitäter / Notfallsanitäter 2: Unterstützt Teamleiter, führt Vitalzeichenkontrolle, dokumentiert Behandlung.</li>
+<li><b>Notfallsanitäter / EMT:</b> Erstversorgung am Einsatzort, Kommunikation mit Dispatch, Transport von Patienten.</li>
+<li><b>Rettungssanitäter / Medic:</b> Unterstützung der EMTs, fortgeschrittene medizinische Maßnahmen (RP-konform), Dokumentation.</li>
+<li>Auszubildender / Praktikant: Beobachtet, assistiert bei einfachen Maßnahmen, lernt Abläufe kennen.</li>
+<li>Fahrer / Fahrer des Rettungswagens: Kümmert sich um sicheres Fahren, Navigieren und Materialbereitstellung.</li>
+<li>Pilot (optional bei Luftrettung): Sichere Beförderung von Patienten & Personal, Einhaltung RP-Verkehrsregeln.</li>
+</ul>
+<p><b>Gameplay-Tipps:</b> Klare Rollenverteilung vermeidet Chaos. Spieler können Rollen wechseln, z.B. bei großen Einsätzen.</p>
+</div>
+
+<!-- Notfallrettung -->
+<div class="section" id="Notfallrettung">
+<h2>2. Notfallrettung</h2>
+<p><b>Beschreibung:</b> Sofortmaßnahmen bei lebensbedrohlichen Zuständen (Herzstillstand, schwere Blutungen, Bewusstlosigkeit).</p>
+<p><b>RP-Aktionen:</b></p>
+<ul>
+<li>Vitalzeichen checken: Puls, Atmung, Bewusstsein.</li>
+<li>Sofortmaßnahmen: CPR, Blutstillung, Sauerstoffgabe.</li>
+<li>Kommunikation: Status an Leitstelle melden („Patient stabil/instabil, Transport in 5 Minuten“).</li>
+<li>Einsatzprotokoll führen (RP: Funkmeldungen, Dokumentation im Fahrzeug).</li>
+</ul>
+<p><b>Spieler-Tipps:</b> Realistische Zeitabläufe einhalten (z. B. 30 Sekunden CPR = 1 „RP-Minute“). Teamarbeit zeigen: Wer reanimiert, wer dokumentiert, wer funkt.</p>
+</div>
+
+<!-- Traumaversorgung -->
+<div class="section" id="Traumaversorgung">
+<h2>3. Traumaversorgung</h2>
+<p><b>Beschreibung:</b> Spezialisierte Versorgung von Verletzten bei Unfällen oder schweren Traumata.</p>
+<p><b>RP-Aktionen:</b></p>
+<ul>
+<li>Patienten immobilisieren (Schaufeltrage, Halskrause, Vakuummatratze).</li>
+<li>Blutungen stillen, Wunden verbinden.</li>
+<li>Vitalzeichen kontinuierlich überwachen.</li>
+<li>Kommunikation mit Krankenhaus über Schweregrad und Verletzungen.</li>
+</ul>
+<p><b>Spieler-Tipps:</b> Verletzungen realistisch darstellen (z. B. gebrochener Arm → Schmerzen, Bewegungseinschränkung). Entscheidungen abwägen: Soforttransport vs. Stabilisierung vor Ort.</p>
+</div>
+
+<!-- Air Rescue -->
+<div class="section" id="Airrescue">
+<h2>4. Air Rescue</h2>
+<p><b>Beschreibung:</b> Einsatz von Hubschraubern / Luftrettung bei schwer zugänglichen Orten oder kritischen Patienten.</p>
+<p><b>RP-Aktionen:</b></p>
+<ul>
+<li>Standort für Hubschrauber sichern.</li>
+<li>Patienten für Lufttransport vorbereiten (Sicherheitsgurte, Immobilisation).</li>
+<li>Kommunikation mit Piloten: Landezone, Gewicht, Patientenzustand.</li>
+<li>Übergabe an Hubschrauberteam koordinieren.</li>
+</ul>
+<p><b>Spieler-Tipps:</b> Sicherheitsregeln beachten (kein RP in Rotorbereich). Patienten realistisch vorbereiten, z. B. Schocklage, Sauerstoffmaske.</p>
+</div>
+
+<!-- Psychologische Betreuung -->
+<div class="section" id="Psychologischebetreuung">
+<h2>5. Psychologische Betreuung</h2>
+<p><b>Beschreibung:</b> Patienten, Angehörige und Ersthelfer emotional unterstützen.</p>
+<p><b>RP-Aktionen:</b></p>
+<ul>
+<li>Ruhige, klare Ansagen („Wir kümmern uns um Sie“).</li>
+<li>Angst und Panik erkennen, beruhigen.</li>
+<li>Angehörige informieren und unterstützen.</li>
+<li>Nachsorge im Einsatzbesprechungs-RP (z. B. Traumateam, Debriefing).</li>
+</ul>
+<p><b>Spieler-Tipps:</b> Sprache und Tonfall realistisch halten. Emotionen der Patienten darstellen (z. B. Panikattacke → Spieler muss beruhigen).</p>
+</div>
+
+<!-- Zusammenfassung -->
+<div class="section">
+<h2>💡 Zusammengefasst</h2>
+<ul>
+<li>Rollen definieren → wer macht was</li>
+<li>Maßnahmen nach Dringlichkeit → Notfall zuerst, Traumaversorgung parallel</li>
+<li>Kommunikation realistisch einbauen → Funken, Statusmeldungen</li>
+<li>Spielerische Details → Emotionen, Verletzungen, Entscheidungen</li>
+</ul>
+</div>
+
+<section class="section">
+    <h3>Abteilungen</h3>
+
+    <div class="grid">
+
+        <article class="card" onclick="this.classList.toggle('active')">
+            <h4>Rollen & Zuständigkeiten</h4>
+            <p class="description">Schnelle medizinische Versorgung vor Ort, RP-realistisch und professionell.</p>
+        </article>
+
+        <article class="card" onclick="this.classList.toggle('active')">
+            <h4>Notfallrettung</h4>
+            <p class="description">Schnelle medizinische Versorgung vor Ort, RP-realistisch und professionell.</p>
+        </article>
+
+        <article class="card" onclick="this.classList.toggle('active')">
+            <h4>Traumaversorgung</h4>
+            <p class="description">Psychologische Unterstützung nach kritischen RP-Einsätzen.</p>
+        </article>
+
+        <article class="card" onclick="this.classList.toggle('active')">
+            <h4>Air Rescue</h4>
+            <p class="description">Luftrettung für schnelle Patiententransporte und Notfalleinsätze.</p>
+        </article>
+
+        <article class="card" onclick="this.classList.toggle('active')">
+            <h4>Psychologische Betreuung</h4>
+            <p class="description">Unterstützung für Patienten und Teammitglieder in schwierigen RP-Situationen.</p>
+        </article>
+
+    </div>
+</section>
+
+<div class="note">
+<b>Hinweis:</b> Für <b> EMS – TrueLife FiveM</b>. 
+</div>
+<a href="index.html" class="back-button">Zurück zum Hauptmenü</a>
+</body>
+</html>
