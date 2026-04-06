@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Gothic EMS – SOP & Standards</title>
+<style>
+/* Basis-Layout */
+body {
+    margin: 0;
+    font-family: 'Times New Roman', serif;
+    background: #0a0a0a url('textures/dark-nebel.png') repeat;
+    color: #ddd;
+    line-height: 1.6;
+}
+h1, h2 {
+    font-family: 'Blackletter', serif;
+    text-shadow: 0 0 8px #9400d3, 0 0 12px #6a0dad;
+    margin-bottom: 15px;
+}
+h1 {
+    color: #c0c0c0;
+    font-size: 3em;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 2px solid #6a0dad;
+}
+h2 {
+    color: #9400d3;
+    font-size: 2em;
+    margin-top: 40px;
+    border-left: 6px solid #6a0dad;
+    padding-left: 12px;
+}
+
+/* Sektionen */
+.section {
+    background: rgba(10,10,10,0.85);
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    border: 2px solid #6a0dad;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(148,0,211,0.4);
+}
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    padding: 8px 0;
+    position: relative;
+}
+li:before {
+    content: '⚡';
+    position: absolute;
+    left: -25px;
+    color: #c0c0c0;
+    text-shadow: 0 0 5px #9400d3;
+}
+.note {
+    background: #1a0a1a;
+    border-left: 5px solid #c0c0c0;
+    padding: 15px;
+    margin-top: 20px;
+    color: #eee;
+    text-shadow: 0 0 3px #6a0dad;
+}
+
+/* Hover-Effekt */
+.section li:hover {
+    color: #fff;
+    text-shadow: 0 0 12px #9400d3;
+}
+
+/* Code / Funktionsbeispiele */
+.code-block {
+    background: #111;
+    border: 1px solid #6a0dad;
+    padding: 10px;
+    margin: 10px 0;
+    font-family: monospace;
+    color: #c0c0c0;
+    border-radius: 6px;
+}
+   /* Polaroid-Bilder */
+.polaroid {
+    display: inline-block;
+    background: white;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.3);
+    transform: rotate(calc(-5deg + 10deg * var(--rand)));
+    transition: transform 0.3s;
+}
+.polaroid:hover {
+    transform: scale(1.1) rotate(0deg);
+    z-index: 10;
+}
+</style>
+</head>
+<body>
+<script> const images = [ 
+  
