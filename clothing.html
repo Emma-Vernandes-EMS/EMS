@@ -96,6 +96,9 @@ li:before {
     transform: scale(1.1) rotate(0deg);
     z-index: 10;
 }
+    image.onclick = () => {
+    window.open(image.src, "_blank");
+};
 </style>
 </head>
 <body>
@@ -106,3 +109,24 @@ li:before {
     "31.png","32.png"
   ];
 </script>
+    <div id="gallery" class="section"></div>
+
+<script>
+const gallery = document.getElementById("gallery");
+
+images.forEach((img, index) => {
+    const polaroid = document.createElement("div");
+    polaroid.className = "polaroid";
+    
+    // Zufallsrotation
+    polaroid.style.setProperty('--rand', Math.random());
+
+    const image = document.createElement("img");
+    image.src = "images/" + img; // Ordner anpassen!
+    image.style.width = "150px";
+    
+    polaroid.appendChild(image);
+    gallery.appendChild(polaroid);
+});
+</script>
+    
